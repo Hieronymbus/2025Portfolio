@@ -34,7 +34,7 @@
       opacity: 1;
     }
     50% {
-      opacity: 0.8;
+      opacity: 0.5;
     }
   }
   @keyframes fade-in {
@@ -49,14 +49,14 @@
   }
   @keyframes meteor {
     0%{
-      transform: rotate(215deg) translateX(0);
+      transform: rotate(220deg) translateX(0);
       opacity:1;
     }
-    100% {
+    70% {
       opacity: 1;
     }
-    50% {
-      transform: rotate(215deg) translateX(-500px);
+    100% {
+      transform: rotate(225deg) translateX(-500px);
       opacity:0;
     }
   }
@@ -155,7 +155,7 @@
 }
 
 @utility meteor {
-  @apply absolute rounded-full bg-linear-to-r from-white via-white to-transparent;
+  @apply absolute rounded-full bg-linear-to-r from-green-200 via-green-50 to-transparent;
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 

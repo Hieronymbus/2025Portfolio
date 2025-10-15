@@ -11,7 +11,7 @@ export const ThemeToggle = () => {
             setIsDarkMode(true)
             document.documentElement.classList.add('dark')
         } else {
-            setIsDarkMode(false)
+            setIsDarkMode(false)     
             document.documentElement.classList.add('light')
         } 
     }, [])
@@ -35,7 +35,7 @@ export const ThemeToggle = () => {
                 "focus:outline-hidden"
             )}
             onClick={toggleTheme}
-        >
+        >   
             { 
                 isDarkMode 
                 ? 
