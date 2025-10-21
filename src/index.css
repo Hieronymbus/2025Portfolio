@@ -23,7 +23,7 @@
     0%,
     100% {
       transform: translateY(0);
-    }
+    }6
     50% {
       transform: translateY(-10px);
     }
@@ -81,9 +81,9 @@
     --background: 222 47% 4%;
     --foreground: 213 31% 91%;
 
-    --card:222 31% 91%;
+    --card:222 47% 8%;
 
-    --primary: 255 55% 70%;
+    --primary: 250 65% 65%;
     --primary-foreground: 213 31% 91%;
 
     --border: 217 33% 20%;
