@@ -1,7 +1,8 @@
 import { Github, Instagram, Linkedin, Mail, Map, MapPin, Phone, Send, Twitch, Twitter } from 'lucide-react'
 import { cn } from '../library/utils'
-import useToast from '@/hooks/use-toast.js'
+import {useToast} from '@/hooks/use-toast.js'
 import React from 'react'
+import { Description } from '@radix-ui/react-toast'
 
 export const ContactSection = () => {
 
@@ -11,6 +12,11 @@ export const ContactSection = () => {
 
         e.preventDefault()
         setTimeout(() => {
+
+            toast({
+                title: "Message sent!",
+                description: "Thanks for the message. I'll get back to you soon"
+            })
 
         }, 1500)
     }
@@ -133,6 +139,7 @@ export const ContactSection = () => {
                     </div>
                     <div
                         className='bg-card p-8 rounded-lg shadow-xs' 
+                        onSubmit={handleSubmit}
                     >
                         <h3 className='text-2xl font-semibold mb-6'> Send a Message</h3>
                         <form 
