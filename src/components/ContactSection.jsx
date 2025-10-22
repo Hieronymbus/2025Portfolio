@@ -1,7 +1,20 @@
-import { Github, Instagram, Linkedin, Mail, Map, MapPin, Phone, Twitch, Twitter } from 'lucide-react'
+import { Github, Instagram, Linkedin, Mail, Map, MapPin, Phone, Send, Twitch, Twitter } from 'lucide-react'
+import { cn } from '../library/utils'
+import useToast from '@/hooks/use-toast.js'
 import React from 'react'
 
 export const ContactSection = () => {
+
+    const { toast } = useToast()
+
+    const handleSubmit = (e) => {
+
+        e.preventDefault()
+        setTimeout(() => {
+
+        }, 1500)
+    }
+
     return (
         <section
             id='contact'
@@ -117,16 +130,80 @@ export const ContactSection = () => {
                             </div>
                         </div>
 
-                        <div
-                           className='bg-card p-8 rounded-lg shadow-xs' 
+                    </div>
+                    <div
+                        className='bg-card p-8 rounded-lg shadow-xs' 
+                    >
+                        <h3 className='text-2xl font-semibold mb-6'> Send a Message</h3>
+                        <form 
+                            action=""
+                            className='space-y-6 '
                         >
-                            <h3 className='text-2xl font-semibold mb-6'> Send a Message</h3>
-                            <form 
-                                action=""
-                            >
+                            <label 
+                                htmlFor="name"
+                                className='block text-sm font-medium mb-2'
+                            > 
+                                Your Name
+                            </label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                placeholder='Bob Ross...' 
+                                required 
+                                className={cn(
+                                    'w-full px-4 py-3 rounded-md border border-input bg-background ',
+                                    'focus:outline-none focus:ring-2 focus:ring-primary/30'
+                                )}
+                            />
 
-                            </form>
-                        </div>
+                            <label 
+                                htmlFor="email"
+                                className='block text-sm font-medium mb-2'
+                            > 
+                                Your Email
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder='Bob@Ross.com...' 
+                                required 
+                                className={cn(
+                                    'w-full px-4 py-3 rounded-md border border-input bg-background ',
+                                    'focus:outline-none focus:ring-2 focus:ring-primary/30'
+                                )}
+                            />
+
+                            <label 
+                                htmlFor="message"
+                                className='block text-sm font-medium mb-2'
+                            > 
+                                Your Message
+                            </label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                placeholder='Greetings, I would like to discuss...' 
+                                required 
+                                className={cn(
+                                    'w-full px-4 py-3 rounded-md border border-input bg-background ',
+                                    'focus:outline-none focus:ring-2 focus:ring-primary/30',
+                                    'resize-none'
+                                )}
+                            />
+
+                            <button
+                                type='submit'
+                                className={cn(
+                                    'cosmic-button w-full flex items-center justify-center gap-2',
+                                    ''
+
+                                )} 
+                            >
+                                <Send />
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
