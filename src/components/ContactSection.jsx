@@ -110,6 +110,8 @@ export const ContactSection = () => {
                                 >
                                     <h4 className='font-medium'> Location</h4>
                                     <a 
+                                        target="_blank"
+                                        href='https://www.google.com/maps/place/Auckland/@-36.8328344,174.7265725,10z/data=!3m1!4b1!4m6!3m5!1s0x6d0d47fb5a9ce6fb:0x500ef6143a29917!8m2!3d-36.8508827!4d174.7644881!16zL20vMDEydHM?entry=ttu&g_ep=EgoyMDI1MTAyMC4wIKXMDSoASAFQAw%3D%3D'
                                         className='text-muted-foreground hover:text-primary transition-colors'
                                     >
                                         Auckland, New Zealand
@@ -129,11 +131,11 @@ export const ContactSection = () => {
                             <div
                                 className='flex space-x-4 justify-center'
                             >
-                                <a href="#" target='_blank'>
+                                <a href="https://www.linkedin.com/in/alexander-birdsall" target='_blank'>
                                     <Linkedin />
                                 </a>
                                 
-                                <a href="#" target='_blank'>
+                                <a href="https://github.com/Hieronymbus" target='_blank'>
                                     <Github />
                                 </a>
                                 

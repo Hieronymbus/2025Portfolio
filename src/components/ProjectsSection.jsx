@@ -129,7 +129,7 @@ export const ProjectsSection = () => {
                 className='text-center mt-12'
             >
                 <a 
-                    href="#"
+                    href="https://github.com/Hieronymbus"
                     target='_blank'
                     className='cosmic-button w-fit flex items-center mx-auto gap-2'
                 >
