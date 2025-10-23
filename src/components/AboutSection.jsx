@@ -1,6 +1,6 @@
 import React from 'react'
 import { cn } from '../library/utils'
-import { Briefcase, Code, User } from 'lucide-react'
+import { ArrowDown, Briefcase, Code, User } from 'lucide-react'
 
 export const AboutSection = () => {
   return (
@@ -137,6 +137,16 @@ export const AboutSection = () => {
                     </div>
                 </div>
             </div>
+        </div>
+        <div
+            className='absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce '
+        >
+            <span
+                className='text-sm text-muted-foreground mb-2'
+            >
+                Scroll
+            </span>
+            <ArrowDown size={24}/>
         </div>
     </section>
   )

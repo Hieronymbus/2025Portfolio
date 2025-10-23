@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { cn } from '../library/utils';
+import { ArrowDown } from 'lucide-react';
 
 
 const skills = [
@@ -103,6 +104,16 @@ export const SkillsSection = () => {
                     })
                 }
             </div>
+        </div>
+        <div
+            className='absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce '
+        >
+            <span
+                className='text-sm text-muted-foreground mb-2'
+            >
+                Scroll
+            </span>
+            <ArrowDown size={24}/>
         </div>
     </section>
   )

@@ -18,7 +18,7 @@ export const Home = () => {
         >
 
             {/* {Theme Toggle} */}
-                <ThemeToggle />
+                {/* <ThemeToggle /> */}
 
             {/* {Background Effects} */}
                 <StarBackground />
