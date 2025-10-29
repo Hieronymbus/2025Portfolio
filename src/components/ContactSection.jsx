@@ -3,25 +3,63 @@ import { cn } from '../library/utils'
 import {useToast} from '@/hooks/use-toast.js'
 import React, { useState } from 'react'
 import { Description } from '@radix-ui/react-toast'
+import emailjs from '@emailjs/browser';
+
 
 export const ContactSection = () => {
 
     const { toast } = useToast()
     const [isSubmitting, setIsSubmitting] = useState(false)
 
-    const handleSubmit = (e) => {
+    const SERVICE_ID = "service_bttjl1u"
+    const TEMPLATE_ID = "template_h7v05of"
+    const PUBLIC_KEY = "czB5_tzWQ3ElFRwoN"
+
+    const [formData, setFormData] = useState({
+        name:"",
+        email:"",
+        message:""
+    })
+
+    const  handleSubmit = async (e) => {
 
         e.preventDefault()
         setIsSubmitting(true)
-        setTimeout(() => {
+        
+        try {
+            const response = await emailjs.sendForm(
+                SERVICE_ID,
+                TEMPLATE_ID,
+                e.target,
+                PUBLIC_KEY
+            ) 
 
             toast({
                 title: "Message sent!",
                 description: "Thanks for the message. I'll get back to you soon"
             })
 
+            setFormData({
+                name:"",
+                email:"",
+                message:""
+            });
+
+        } catch (error) {
+
+            toast({
+                title: "Message failed to send!",
+                description: "Please try again later or use the email provided.",
+                variant: "destructive",
+            });
+            
+        } finally {
+            
             setIsSubmitting(false)
-        }, 1500)
+        }
+
+      
+         
     }
 
     return (
@@ -145,12 +183,12 @@ export const ContactSection = () => {
                     </div>
                     <div
                         className='bg-card p-8 rounded-lg shadow-xs' 
-                        onSubmit={handleSubmit}
                     >
                         <h3 className='text-2xl font-semibold mb-6'> Send a Message</h3>
                         <form 
                             action=""
                             className='space-y-6 '
+                            onSubmit={handleSubmit}
                         >
                             <label 
                                 htmlFor="name"
@@ -162,6 +200,8 @@ export const ContactSection = () => {
                                 type="text" 
                                 id="name" 
                                 name="name" 
+                                value={formData.name}
+                                onChange={(e) => setFormData(prev => ({...prev, name: e.target.value}))}
                                 placeholder='Bob Ross...' 
                                 required 
                                 className={cn(
@@ -180,6 +220,8 @@ export const ContactSection = () => {
                                 type="email" 
                                 id="email" 
                                 name="email" 
+                                value={formData.email}
+                                onChange={(e) => setFormData(prev => ({...prev, email: e.target.value}))}
                                 placeholder='Bob@Ross.com...' 
                                 required 
                                 className={cn(
@@ -197,6 +239,8 @@ export const ContactSection = () => {
                             <textarea 
                                 id="message" 
                                 name="message" 
+                                value={formData.message}
+                                onChange={(e) => setFormData(prev => ({...prev, message: e.target.value}))}
                                 placeholder='Greetings, I would like to discuss...' 
                                 required 
                                 className={cn(
