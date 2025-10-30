@@ -79,10 +79,11 @@ export const StarBackground = () => {
             {meteors.map((meteor, index) => (
                 <div
                     className=''
+                    key={meteor.id}
                     style={{ filter: "drop-shadow(0 0 10px rgb(255, 255, 255))" }}
                 >
                     <div
-                        key={meteor.id}
+                        
                         className='meteor animate-meteor'
                         style={{
                             width: meteor.size * 55  + "px",
