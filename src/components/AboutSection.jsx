@@ -27,20 +27,18 @@ export const AboutSection = () => {
                 >
                     <h3
                         className='text-2xl font-semi-bold'
-                    >Passionate web developer & tech maker </h3>
+                    >Curious coder & cosmic tinkerer </h3>
                     <p
                         className='text-muted-foreground'
                     >
-                        I’m a junior web developer with a passion for creating interactive and user-friendly web experiences. 
-                        I enjoy turning ideas into functional interfaces, 
-                        experimenting with modern technologies, and continuously learning new ways to improve my craft.
+                        I’m a junior web developer, which is a bit like being a wizard except my spells are written in JavaScript, and my magic runs in the browser (most of the time). 
+                        I love crafting sites that feel alive, experimenting with shiny new tech, and learning faster than a comet with commitment issues.
                     </p>
                     <p
                         className='text-muted-foreground'
                     >
-                        When I’m not coding, I like exploring creative projects, solving problems, 
-                        and diving into new challenges. My goal is to contribute to projects that are both impactful and enjoyable for users, 
-                        while growing as a developer every day.
+                        When not conjuring pixels, I dabble in creative experiments and chase problems like mischievous space gremlins. 
+                        My quest? To help projects orbit success while continuing my own voyage through the ever-expanding universe of code.
                     </p>
 
                     <div
@@ -130,7 +128,7 @@ export const AboutSection = () => {
                                 <p
                                     className='text-muted-foreground'
                                 >
-                                    Leading  projects from conception to completion with agile methodologies
+                                    Supporting projects from concept to completion with agile workflows.
                                 </p>
                             </div>
                         </div>

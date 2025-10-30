@@ -61,7 +61,7 @@ export const SkillsSection = () => {
                                 : "bg-secondary/70 text-foreground hover:bd-secondary"
                             )}
                         >
-                            {category}
+                            {category.charAt(0).toLocaleUpperCase() + category.slice(1)}
                         </button>
                     )
                 })}
