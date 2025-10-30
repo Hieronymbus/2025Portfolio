@@ -18,7 +18,7 @@ export const HeroSection = () => {
                 >
                     <span
                         className='opacity-0 animate-fade-in'
-                    > Hi, I'm </span>
+                    > Hello, I'm </span>
                     <span
                         className='text-primary opacity-0 animate-fade-in-delay-1'
                     > Alexander</span>
@@ -29,9 +29,9 @@ export const HeroSection = () => {
                 <p
                     className='text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3  '
                 >
-                    Exploring the universe of code, 
-                    I craft sleek and interactive web experiences that launch ideas into reality. As a junior web developer, 
-                    I’m ready to navigate new challenges and help your projects reach stellar heights.
+                    The universe is a complex system full of mysterious forces: gravity, time, and React’s rendering cycle. 
+                    I try to make small corners of it behave nicely on screens. Some call that ‘development’. 
+                    I call it a truce with entropy.
                 </p>
                 <div
                     className='pt-4 opacity-0 animate-fade-in-delay-4'

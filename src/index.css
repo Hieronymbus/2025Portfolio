@@ -8,6 +8,8 @@
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
 
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
   --color-card: hsl(var(--card));
 
   --animate-float: float 6s ease-in-out infinite;
@@ -65,28 +67,31 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    /* Light theme */
+    --background: 210 40% 98%;            /* light neutral background */
+    --foreground: 222 47% 11%;            /* main text */
+    --subtle-foreground: 222 10% 35%;     /* muted/faded text */
 
-    --card:0 0% 100%;
+    --card: 0 0% 100%;                     /* card background */
 
-    --primary: 250 47% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 120 60% 50%;                /* green accent */
+    --primary-foreground: 210 40% 98%;     /* text on green buttons */
 
-    --border: 214 32% 91%;
-
+    --border: 214 32% 91%;                 /* light border color */
   }
 
   .dark {
-    --background: 222 47% 4%;
-    --foreground: 213 31% 91%;
+    /* Dark theme */
+    --background: 222 47% 4%;              /* dark background */
+    --foreground: 213 31% 91%;             /* main text */
+    --subtle-foreground: 213 10% 65%;      /* muted/faded text */
 
-    --card:222 47% 11%;
+    --card: 222 47% 11%;                    /* dark card background */
 
-    --primary: 250 65% 65%;
-    --primary-foreground: 213 31% 91%;
+    --primary: 120 60% 45%;                 /* brighter green accent for dark mode */
+    --primary-foreground: 213 31% 91%;      /* text on green buttons */
 
-    --border: 217 33% 20%;
+    --border: 217 33% 20%;                  /* dark border color */
   }
 
   * {
@@ -156,9 +161,11 @@
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
 }
 
+
 @utility meteor {
-  @apply absolute rounded-full bg-linear-to-r from-green-200 via-green-50 to-transparent;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+  @apply absolute rounded-full bg-linear-to-r from-green-400 via-green-50 to-transparent;
+  /* box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); */
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
 #root {
