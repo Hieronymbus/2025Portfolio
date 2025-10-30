@@ -11,9 +11,10 @@ export const ContactSection = () => {
     const { toast } = useToast()
     const [isSubmitting, setIsSubmitting] = useState(false)
 
-    const SERVICE_ID = "service_bttjl1u"
-    const TEMPLATE_ID = "template_h7v05of"
-    const PUBLIC_KEY = "czB5_tzWQ3ElFRwoN"
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
 
     const [formData, setFormData] = useState({
         name:"",
